@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Mulish';
+  src: url("../fonts/Mulish-Regular.woff2") format('woff2'),
+       url("../fonts/Mulish-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/Oswald-Regular.woff2") format('woff2'),
+       url("../fonts/Oswald-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/Oswald-Light.woff2") format('woff2'),
+       url("../fonts/Oswald-Light.woff") format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url("../fonts/Mulish-Italic.woff2") format('woff2'),
+       url("../fonts/Mulish-Italic.woff") format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url("../fonts/Mulish-Medium.woff2") format('woff2'),
+       url("../fonts/Mulish-Medium.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url("../fonts/Mulish-Bold.woff2") format('woff2'),
+       url("../fonts/Mulish-Bold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* basic style */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+font-family: "Mulish", sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1440px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
