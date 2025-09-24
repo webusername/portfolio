@@ -94,3 +94,34 @@ ul {
   display: flex;
 }
 
+/* header */
+
+.header {
+  background: #222;
+}
+.nav {
+  padding: 18px 20px;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+}
+.menu {
+  align-items: center;
+  gap: 40px;
+}
+.menu__item {
+  height: 24px;
+}
+
+.menu__link {
+  font-family: Oswald;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.menu__link:hover {
+  color: #ff3c3c;
+}
