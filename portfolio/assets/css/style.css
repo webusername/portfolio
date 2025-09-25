@@ -65,7 +65,7 @@ font-family: "Mulish", sans-serif;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 24px; /* 150% */
+line-height: 24px;
 }
 
 img {
@@ -94,11 +94,14 @@ ul {
   display: flex;
 }
 
-/* header */
-
-.header {
+.header,
+.hero {
+  color: #fff;
   background: #222;
 }
+/* header */
+
+
 .nav {
   padding: 18px 20px;
 }
@@ -124,4 +127,103 @@ ul {
 
 .menu__link:hover {
   color: #ff3c3c;
+}
+
+/* hero */
+
+.hero {
+  margin-bottom: 60px;
+  padding: 60px 0;
+}
+.hero__author {
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 60px;
+  align-items: center;
+  gap: 12px;
+  margin-right: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.author__text,
+.author__year {
+  writing-mode: vertical-rl;
+  margin: 0;
+  transform: rotate(180deg);
+}
+.author__line {
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+}
+.hero__text {
+  max-width: 740px;
+  width: 100%;
+  margin-right: 40px;
+  padding: 100px 20px 0;
+  font-family: Oswald;
+}
+.hero__stat {
+  gap: 60px;
+  margin-bottom: 40px;
+}
+.hero__stat-block {
+  padding-left: 23px;
+}
+.hero__stat-dig {
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 54px;
+  text-transform: uppercase;
+}
+.hero__stat-dig::before {
+  content: "+";
+  position: absolute;
+  left: -23px;
+}
+.hero__stat-text {
+  font-family: Mulish;
+}
+.hero__text>p {
+  margin: 0 0 40px;
+  font-size: 116px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 132px;
+  text-transform: uppercase;
+}
+.hero__text h1 {
+  margin-bottom: 160px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.hero__scroll {
+  gap: 8px;
+}
+.hero__scroll-text {
+  margin: 0;
+  font-family: Mulish;
+}
+.hero__img {
+  align-items: center;
+  margin-right: 40px;
+  max-width: 220px;
+}
+.hero__credo {
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 280px;
+}
+.hero__credo-img {
+}
+.hero__credo-text {
+  align-self: flex-end;
+  max-width: 220px;
+  margin: 0;
+  text-align: right;
 }
