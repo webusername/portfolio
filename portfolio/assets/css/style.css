@@ -83,21 +83,30 @@ img {
 a {
   text-decoration: none;
 }
-
+p {
+  margin: 0;
+}
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-
 .flex {
   display: flex;
 }
-
 .header,
 .hero {
   color: #fff;
   background: #222;
+}
+.section-title {
+  margin: 0 0 12px;
+  font-family: Oswald;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 125% */
+  text-transform: uppercase;
 }
 /* header */
 
@@ -105,7 +114,6 @@ ul {
 .nav {
   padding: 18px 20px;
 }
-
 .logo {
   width: 20px;
   height: 20px;
@@ -118,13 +126,11 @@ ul {
 .menu__item {
   height: 24px;
 }
-
 .menu__link {
   font-family: Oswald;
   color: #fff;
   text-transform: uppercase;
 }
-
 .menu__link:hover {
   color: #ff3c3c;
 }
@@ -206,7 +212,6 @@ ul {
   gap: 8px;
 }
 .hero__scroll-text {
-  margin: 0;
   font-family: Mulish;
 }
 .hero__img {
@@ -219,11 +224,20 @@ ul {
   justify-content: space-between;
   flex-basis: 280px;
 }
-.hero__credo-img {
-}
 .hero__credo-text {
   align-self: flex-end;
   max-width: 220px;
-  margin: 0;
   text-align: right;
+}
+
+/* about */
+
+.about__container {
+  gap: 40px;
+  padding: 60px 20px;
+}
+.about__block {
+  flex-direction: column;
+  gap: 40px;
+  flex-basis: 440px;
 }
