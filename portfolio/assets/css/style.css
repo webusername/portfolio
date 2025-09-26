@@ -357,14 +357,13 @@ ul {
   flex-basis: 724px;
 }
 .faq__block {
-  padding: 20px 0;
   border-bottom: 1px solid #ccc;
   transition: border-color 0.3s;
 }
 .faq__header {
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 18px;
+  padding: 20px 0;
   cursor: pointer;
 }
 .faq__question {
@@ -409,6 +408,7 @@ ul {
 }
 .faq__answer {
   display: none;
+  padding-bottom: 20px;
 }
 .faq__answer.open {
   display: block;
