@@ -95,7 +95,8 @@ ul {
   display: flex;
 }
 .header,
-.hero {
+.hero,
+.portfolio {
   color: #fff;
   background: #222;
 }
@@ -239,4 +240,36 @@ ul {
   flex-direction: column;
   gap: 40px;
   flex-basis: 440px;
+}
+
+/* my portfolio */
+
+.portfolio {
+  padding: 60px 20px;
+}
+.portfolio__text {
+  max-width: 360px;
+  margin-bottom: 40px;
+}
+.portfolio__slider {
+  gap: 20px;
+  overflow: hidden;
+}
+.slider {
+  justify-content: center;
+}
+.slider img {
+  align-self: flex-start;
+}
+.slider img:nth-child(1),
+.slider img:nth-child(3),
+.slider img:nth-child(5),
+.slider img:nth-child(8),
+.slider img:nth-child(11) {
+  padding-top: 120px;;
+}
+.slider img:nth-child(2),
+.slider img:nth-child(6),
+.slider img:nth-child(9) {
+  align-self: center;
 }
