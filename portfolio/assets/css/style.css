@@ -413,3 +413,37 @@ ul {
 .faq__answer.open {
   display: block;
 }
+
+/* sign up */
+
+.signup {
+}
+.signup__container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 0;
+}
+.signup__title {
+  display: none;
+}
+.signup__text {
+  margin-bottom: 20px;
+}
+.signup__form {
+  margin-bottom: 20px;
+}
+.signup__input {
+}
+.signup__btn {
+}
+.footer__social {
+}
+.social {
+}
+.social__list {
+}
+.social__item {
+}
+.social__link {
+}
