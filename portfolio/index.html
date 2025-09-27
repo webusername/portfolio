@@ -268,20 +268,21 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <section class="signup">
       <div class="container">
-        <div class="footer__signup signup">
-          <div class="signup__container flex">
-            <h2 class="signup__title">Enter your name</h2>
-            <p class="signup__text">Like my portfolio? Sign up for a shoot!</p>
-            <form class="signup__form flex" action="#">
-              <input class="signup__input" type="text" placeholder="your name" required>
-              <input class="signup__input" type="tel" placeholder="+1" required>
-              <button type="submit" class="signup__btn btn">book now</button>
-            </form>
-          </div>
+        <div class="signup__container flex">
+          <h2 class="signup__title">Enter your name</h2>
+          <p class="signup__text">Like my portfolio? Sign up for a shoot!</p>
+          <form class="signup__form flex" action="#" autocomplete="on">
+            <input class="signup__input" type="text" placeholder="your name" name="name" autocomplete="name" required>
+            <input class="signup__input signup__tel" type="tel" value="+1 " name="phone" autocomplete="tel" required>
+            <button type="submit" class="signup__btn btn">book now</button>
+          </form>
         </div>
-        <div class="footer__social social">
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container container">
           <ul class="social__list flex">
             <li class="social__item">
               <a class="social__link" href="#">instagram</a>
@@ -299,7 +300,6 @@
               <a class="social__link" href="tel:+12349843572">+1 234 9843572</a>
             </li>
           </ul>
-        </div>
       </div>
     </footer>
   </main>

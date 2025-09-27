@@ -61,15 +61,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-font-family: "Mulish", sans-serif;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;
+  color: #222;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
-
 img {
   max-width: 100%;
   height: auto;
@@ -100,13 +99,18 @@ ul {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.btn:hover {
+  color: #222;
+  background-color: #ff3c3c;
+}
 .flex {
   display: flex;
 }
 .header,
 .hero,
 .portfolio,
-.faq {
+.faq,
+.footer {
   color: #fff;
   background: #222;
 }
@@ -120,8 +124,6 @@ ul {
   text-transform: uppercase;
 }
 /* header */
-
-
 .nav {
   padding: 18px 20px;
 }
@@ -147,7 +149,6 @@ ul {
 }
 
 /* hero */
-
 .hero {
   padding: 60px 0;
 }
@@ -241,7 +242,6 @@ ul {
 }
 
 /* about */
-
 .about__container {
   gap: 40px;
   padding: 60px 20px;
@@ -253,7 +253,6 @@ ul {
 }
 
 /* my portfolio */
-
 .portfolio {
   padding: 60px 20px;
 }
@@ -285,7 +284,6 @@ ul {
 }
 
 /* package and price */
-
 .packages__container {
   padding: 60px 20px;
 }
@@ -332,7 +330,6 @@ ul {
   vertical-align: middle;
   line-height: 1;
 }
-
 .price__cost {
   display: inline-block;
   margin-bottom: auto;
@@ -345,7 +342,6 @@ ul {
 }
 
 /* faq */
-
 .faq__container {
   gap: 40px;
   padding: 60px 20px;
@@ -415,8 +411,10 @@ ul {
 }
 
 /* sign up */
-
 .signup {
+  font-family: Oswald;
+  line-height: 28px;
+  text-transform: uppercase;
 }
 .signup__container {
   flex-direction: column;
@@ -429,21 +427,35 @@ ul {
 }
 .signup__text {
   margin-bottom: 20px;
+    font-size: 20px;
 }
 .signup__form {
+  gap: 8px;
   margin-bottom: 20px;
 }
 .signup__input {
+  flex: 0 0 380px;
+  padding: 0 12px;
+  color: #222;
+  text-transform: uppercase;
+  border: 1px solid #222;
 }
-.signup__btn {
+.signup__input::placeholder {
+  color: #989898;
 }
-.footer__social {
+.signup__input:hover {
+  border-color: #ff3c3c;
 }
-.social {
+.footer__container {
+  padding: 20px;
+  font-family: Oswald;
 }
 .social__list {
-}
-.social__item {
+  justify-content: center;
+  align-items: center;
 }
 .social__link {
+  padding: 20px;
+  color: #fff;
+  text-transform: uppercase;
 }
