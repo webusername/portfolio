@@ -61,6 +61,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: #222;
   font-family: "Mulish", sans-serif;
@@ -220,7 +223,24 @@ ul {
   text-transform: uppercase;
 }
 .hero__scroll {
+  position: relative;
   gap: 8px;
+  width: max-content;
+  cursor: pointer;
+}
+.hero__scroll-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.hero__scroll:hover .hero__scroll-text {
+  color: #ff3c3c;
+}
+.hero__scroll:hover svg path{
+  stroke: #ff3c3c;
 }
 .hero__scroll-text {
   font-family: Mulish;
