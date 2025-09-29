@@ -153,20 +153,20 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  gap: 0.375rem;           /* ~6px между полосками */
+  gap: 0.375rem;
   cursor: pointer;
 }
 .burger span {
   display: block;
-  height: 0.125rem;        /* 2px */
-  background-color: #fff;  /* цвет можно поменять */
+  height: 0.125rem;
+  background-color: #fff;
   border-radius: 1px;
 }
 .burger span:first-child {
-  width: 0.75rem;          /* 12px */
+  width: 0.75rem;
 }
 .burger span:last-child {
-  width: 1.25rem;          /* 20px */
+  width: 1.25rem;
 }
 
 /* hero */
