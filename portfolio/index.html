@@ -9,29 +9,32 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
+    <div class="header__container container flex">
+      <img class="logo" src="./assets/img/logo.svg" alt="Logotype Heat">
       <nav class="nav flex">
-        <img class="logo" src="./assets/img/logo.svg" alt="Logotype Heat">
         <ul class="menu flex">
-          <li class="menu__item"><a class="menu__link" href="#">about me</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">portfolio</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">price</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">faq</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">contacts</a></li>
+          <li class="menu__item"><a class="menu__link" href="#about">about me</a></li>
+          <li class="menu__item"><a class="menu__link" href="#portfolio">portfolio</a></li>
+          <li class="menu__item"><a class="menu__link" href="#packages">price</a></li>
+          <li class="menu__item"><a class="menu__link" href="#faq">faq</a></li>
+          <li class="menu__item"><a class="menu__link" href="#signup">contacts</a></li>
         </ul>
       </nav>
+      <div class="burger">
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
   <main class="main">
-    <section class="hero">
-      <div class="container flex">
+    <section class="hero flex">
+      <div class="hero__container container flex">
         <div class="hero__author author flex">
           <p class="author__text">Best&nbsp;Photographer&nbsp;by&nbsp;MAX</p>
           <div class="author__line"></div>
           <span class="author__year">2025</span>
         </div>
-        <div class="hero__main-part flex">
-          <div class="hero__text">
+          <div class="hero__text flex">
             <div class="hero__stat flex">
               <div class="hero__stat-block">
                 <div class="hero__stat-dig">487</div>
@@ -61,7 +64,6 @@
             <img class="hero__credo-img" src="./assets/img/hero-picture2.jpg" alt="A girl">
             <p class="hero__credo-text">Hi! I’m Vera, a photographer. For me, photography is more than just an image. </p>
           </div>
-        </div>
       </div>
     </section>
     <section class="about" id="about">
@@ -83,12 +85,13 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
-      <div class="container">
+    <section class="portfolio flex" id="portfolio">
+      <div class="portfolio__container container">
         <div class="portfolio__text">
           <h2 class="section-title portfolio__title">my portfolio</h2>
           <p class="portfolio__subtitle">Every shoot is a story. Here you’ll find portraits, love stories, family sessions, and more.</p>
         </div>
+      </div>
       <div class="portfolio__slider slider flex">
         <img src="./assets/img/slider/slide1@1x.webp" srcset="./assets/img/slider/slide1@2x.webp 2x" alt="Slide 1">
         <img src="./assets/img/slider/slide2@1x.webp" srcset="./assets/img/slider/slide2@2x.webp 2x" alt="Slide 2">
@@ -103,16 +106,15 @@
         <img src="./assets/img/slider/slide11@1x.webp" srcset="./assets/img/slider/slide11@2x.webp 2x" alt="Slide 11">
         <img src="./assets/img/slider/slide12@1x.webp" srcset="./assets/img/slider/slide12@2x.webp 2x" alt="Slide 12">
       </div>
-      </div>
     </section>
-    <section class="packages">
+    <section class="packages" id="packages">
       <div class="packages__container container">
         <h2 class="section-title packages__title">Packages & Pricing</h2>
         <p class="packages__subtitle">Choose the package that suits your story. All options are customizable to your needs.</p>
         <div class="packages__info flex">
           <div class="packages__price price flex">
             <h3 class="price__title">Mini</h3>
-            <ul class="price__list">
+            <ul class="price__list flex">
               <li class="price__item">Up to 1 hour of shooting</li>
               <li class="price__item">1 outfit / 1 location</li>
               <li class="price__item">20 edited photos</li>
@@ -125,7 +127,7 @@
           </div>
           <div class="packages__price price flex">
             <h3 class="price__title">Classic</h3>
-            <ul class="price__list">
+            <ul class="price__list flex">
               <li class="price__item">Up to 2 hours of shooting</li>
               <li class="price__item">2 outfits / 2 locations</li>
               <li class="price__item">40+ edited photos</li>
@@ -140,7 +142,7 @@
           </div>
           <div class="packages__price price flex">
             <h3 class="price__title">Story</h3>
-            <ul class="price__list">
+            <ul class="price__list flex">
               <li class="price__item">Up to 4 hours of shooting</li>
               <li class="price__item">3–4 outfits and locations</li>
               <li class="price__item">80+ edited photos</li>
@@ -156,7 +158,7 @@
           </div>
           <div class="packages__price price flex">
             <h3 class="price__title">Wedding</h3>
-            <ul class="price__list">
+            <ul class="price__list flex">
               <li class="price__item">Up to 8 hours of shooting</li>
               <li class="price__item">All key moments covered</li>
               <li class="price__item">250+ artistically edited photos</li>
@@ -173,7 +175,7 @@
         </div>
       </div>
     </section>
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="faq__container container flex">
         <div class="faq__left">
           <h2 class="section-title faq__title">Frequently Asked Questions</h2>
@@ -270,7 +272,7 @@
         </div>
       </div>
     </section>
-    <section class="signup">
+    <section class="signup" id="signup">
       <div class="container">
         <div class="signup__container flex">
           <h2 class="signup__title">Enter your name</h2>
@@ -303,7 +305,7 @@
             </li>
           </ul>
       </div>
-    </footer>
+    </footer> 
   </main>
 </body>
 </html>
