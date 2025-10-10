@@ -55,7 +55,8 @@
 /* basic style */
 *,
 *::before,
-*::after {
+*::after,
+input {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -90,6 +91,7 @@ ul {
 }
 .btn {
   min-width: 12.5rem;
+  min-height: 3.75rem;
   padding: 1.125rem 0;
   color: #fff;
   font-family: "Oswald";
@@ -123,6 +125,9 @@ ul {
   line-height: 2.5rem;
   text-transform: uppercase;
 }
+.no-scroll {
+  overflow: hidden;
+}
 /* header */
 .header__container {
   justify-content: space-between;
@@ -131,7 +136,11 @@ ul {
   height: 60px;
 }
 .nav {
+  justify-content: center;
   align-items: center;
+  position: relative;
+  left: 0;
+  transition: opacity 0.3s ease;
 }
 .logo {
   margin-right: auto;
@@ -164,9 +173,11 @@ ul {
 }
 .burger span:first-child {
   width: 0.75rem;
+  transition: transform 0.3s ease;
 }
 .burger span:last-child {
   width: 1.25rem;
+  transition: transform 0.3s ease;
 }
 
 /* hero */
@@ -481,11 +492,17 @@ ul {
   font-size: 1.25rem;
 }
 .signup__form {
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
+  width: 100%;
   margin-bottom: 1.25rem;
 }
 .signup__input {
-  flex: 0 0 23.75rem;
+  flex: 1 1 auto;
+  max-width: 23.75rem;
+  min-width: 16rem;
+  height: 60px;
   padding: 0 0.75rem;
   color: #222;
   text-transform: uppercase;
@@ -541,10 +558,37 @@ ul {
 }
 @media (max-width: 860px) {
   .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  .nav.open {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+  .nav.open .menu {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .burger.open span:first-child {
+    width: 1.25rem;
+    transform: rotate(45deg) translate(3px, 3px);
+    transition: transform 0.3s ease;
+  }
+  .burger.open span:last-child {
+    width: 1.25rem;
+    transform: rotate(-45deg) translate(3px, -3px);
+    transition: transform 0.3s ease;
   }
   .burger {
     display: inline-flex;
+    position: relative;
+    z-index: 1;
   }
   .hero__author {
     width: 60px;
@@ -569,13 +613,17 @@ ul {
   .faq__right {
     flex-basis: auto;
   }
-  .signup__input {
-    flex-basis: 256px;
-  }
 }
 @media (max-width: 760px) {
   .hero__author {
     display: none;
+  }
+  .signup__form {
+    flex-direction: column;
+  }
+  .signup__input {
+    width: 21.25rem;
+    box-sizing: border-box;
   }
 }
 @media (max-width: 670px) {
@@ -589,12 +637,8 @@ ul {
   .hero__text>p {
   font-size: 3.5rem;
   }
-  .signup__form {
+  .social__list {
     flex-direction: column;
-  }
-  .signup__input {
-    width: 340px;
-    flex-basis: 60px;
   }
 }
 @media (max-width: 400px) {
@@ -624,9 +668,6 @@ ul {
   }
   .packages__container {
     padding-top: 5.5rem;
-  }
-  .social__list {
-    flex-direction: column;
   }
   .social__item {
     padding: 1.125rem 0;
