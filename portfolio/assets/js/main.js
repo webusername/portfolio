@@ -21,9 +21,26 @@ if (burger && nav) {
 
 // Слайдер
 const swiper = new Swiper('.portfolio__slider', {
-  slidesPerView: 5,
-  spaceBetween: 20,
-  grabCursor: true,
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+    breakpoints: {
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
+  },
 });
 
 // Аккдион
