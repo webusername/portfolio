@@ -20,9 +20,26 @@ if (burger && nav) {
 }
 
 // Слайдер
-
 const swiper = new Swiper('.portfolio__slider', {
   slidesPerView: 5,
   spaceBetween: 20,
   grabCursor: true,
+});
+
+// Аккдион
+const faqBlocks = document.querySelectorAll('.faq__block');
+
+faqBlocks.forEach(block => {
+  const header = block.querySelector('.faq__header');
+
+  header.addEventListener('click', () => {
+
+    faqBlocks.forEach(otherBlock => {
+      if (otherBlock !== block) {
+        otherBlock.classList.remove('open');
+      }
+    });
+
+    block.classList.toggle('open');
+  });
 });

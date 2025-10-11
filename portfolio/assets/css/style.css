@@ -447,11 +447,13 @@ ul {
   background: #ff3c3c;
 }
 .faq__answer {
-  display: none;
-  padding-bottom: 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
-.faq__answer.open {
-  display: block;
+.faq__block.open .faq__answer {
+  max-height: 7rem;
+  padding-bottom: 1.25rem;
 }
 
 /* sign up */
