@@ -406,7 +406,6 @@ ul {
 }
 .faq__block {
   border-bottom: 1px solid #ccc;
-  transition: border-color 0.3s;
 }
 .faq__header {
   justify-content: space-between;
@@ -420,6 +419,7 @@ ul {
   font-size: 20px;
   line-height: 1.75rem;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 .faq__header:hover .faq__question {
   color: #ff3c3c;
@@ -438,7 +438,7 @@ ul {
   width: 15.5px;
   height: 1.5px;
   background: #fff;
-  transition: opacity 0.2s ease;
+  transition: all 0.3s ease;
   transform: translateY(-50%);
 }
 .faq__icon span:nth-child(2) {
@@ -455,12 +455,11 @@ ul {
   background: #ff3c3c;
 }
 .faq__answer {
-  max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 .faq__block.open .faq__answer {
-  max-height: 7rem;
+  max-height: 20rem;
   padding-bottom: 1.25rem;
 }
 
@@ -558,10 +557,12 @@ ul {
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 1;
+    opacity: 0;
   }
   .nav.open {
     transform: translateX(0);
     transition: transform 0.3s ease;
+    opacity: 1;
   }
   .nav.open .menu {
     flex-direction: column;

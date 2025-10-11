@@ -48,15 +48,33 @@ const faqBlocks = document.querySelectorAll('.faq__block');
 
 faqBlocks.forEach(block => {
   const header = block.querySelector('.faq__header');
+  const answer = block.querySelector('.faq__answer');
 
+  // Если блок открыт по умолчанию (есть класc open)
+  if (block.classList.contains('open')) {
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  } else {
+    answer.style.maxHeight = '0px';
+  }
+
+  // Клик по вопросу
   header.addEventListener('click', () => {
-
-    faqBlocks.forEach(otherBlock => {
-      if (otherBlock !== block) {
-        otherBlock.classList.remove('open');
+    // Закрываем все остальные
+    faqBlocks.forEach(other => {
+      if (other !== block) {
+        other.classList.remove('open');
+        const otherAnswer = other.querySelector('.faq__answer');
+        otherAnswer.style.maxHeight = '0px';
       }
     });
 
+    // Открываем/закрываем текущий
     block.classList.toggle('open');
+    if (block.classList.contains('open')) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    } else {
+      answer.style.maxHeight = '0px';
+    }
   });
 });
+
