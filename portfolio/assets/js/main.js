@@ -18,3 +18,11 @@ if (burger && nav) {
     }
   });
 }
+
+// Слайдер
+
+const swiper = new Swiper('.portfolio__slider', {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  grabCursor: true,
+});
